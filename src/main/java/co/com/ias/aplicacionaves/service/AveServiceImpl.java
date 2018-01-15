@@ -18,19 +18,14 @@ public class AveServiceImpl implements AveService {
 	@Override
 	public boolean agregarAve(Ave ave) {
         if (aveDao.consultarAve(ave.getId()) != null ) {
-            return false;
+        	aveDao.actualizarAve(ave);
         } else {
         	aveDao.agregarAve(ave);
-            return true;
-        }		
+            
+        }	
+        return true;
 	}
 
-	@Override
-	public void actualizarAve(Ave ave) {
-        if (aveDao.consultarAve(ave.getId()) != null ) {
-        	aveDao.agregarAve(ave);
-        } 
-	}
 
 	@Override
 	public void eliminarAve(Long idAve) {

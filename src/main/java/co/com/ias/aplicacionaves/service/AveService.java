@@ -9,7 +9,6 @@ public interface AveService {
   
 	boolean  agregarAve(Ave ave);
 	
-	void actualizarAve(Ave ave);
 	
 	void eliminarAve(Long idAve);
 	

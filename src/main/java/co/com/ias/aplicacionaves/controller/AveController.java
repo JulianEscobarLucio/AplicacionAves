@@ -43,11 +43,11 @@ public class AveController {
 	
 	
 	
-	@PutMapping("/ave")
-	public ResponseEntity<Ave> ActualizarAve(@RequestBody Ave ave) {
-		aveService.actualizarAve(ave);
-		return new ResponseEntity<Ave>(ave, HttpStatus.OK);		
-	}
+//	@PutMapping("/ave")
+//	public ResponseEntity<Ave> ActualizarAve(@RequestBody Ave ave) {
+//		aveService.actualizarAve(ave);
+//		return new ResponseEntity<Ave>(ave, HttpStatus.OK);		
+//	}
 	
 	@DeleteMapping("/ave/{id}")
 	public ResponseEntity<Void> EliminarAve(@PathVariable("id") Long id) {

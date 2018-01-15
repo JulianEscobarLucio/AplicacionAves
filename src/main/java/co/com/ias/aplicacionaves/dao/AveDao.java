@@ -18,6 +18,8 @@ public interface AveDao {
 	
 	List<Ave> consultarAves(String nombre);
 	
+	void actualizarAve(Ave ave) ;
+	
 	List<Ave> listarAves();
 	
 	List<Pais> listarPais();

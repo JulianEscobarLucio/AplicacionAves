@@ -26,6 +26,15 @@ public class AveDaoImpl implements AveDao {
 			entityManager.persist(new PaisAves(ave, pais));
 		}
 	}
+	
+	@Override
+	public void actualizarAve(Ave ave) {
+		Ave Miave = consultarAve(ave.getId());
+		Miave.setIdPais(ave.getIdPais());
+		Miave.setNombreCientifico(ave.getNombreCientifico());
+		Miave.setNombreComun(ave.getNombreComun());
+		entityManager.flush();
+	}
 
 
 	@Override
